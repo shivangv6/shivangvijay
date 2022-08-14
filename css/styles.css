@@ -10089,6 +10089,28 @@ h3 {
   padding-top: calc(6rem + 74px);
   padding-bottom: 6rem;
 }
+span:before{
+  content: '';
+  animation: animate infinite 8s;
+}
+@keyframes animate{
+  0%{
+      content: "Developer";
+  }
+  25%{
+      content: "ROBOTICIST";
+  }
+  50%{
+      content: "Designer";
+  }
+  75%{
+      content: "Researcher";
+  }
+  100%{
+      content: "Explorer";
+  }
+}
+
 .masthead .masthead-heading {
   font-size: 2.75rem;
   line-height: 2.75rem;
@@ -10113,6 +10135,36 @@ h3 {
     font-size: 1.5rem;
   }
 }
+
+.about {
+  padding-top: calc(6rem + 74px);
+  padding-bottom: 6rem;
+}
+.about .about-heading {
+  font-size: 2.75rem;
+  line-height: 2.75rem;
+}
+.about .about-subheading {
+  font-size: 1.25rem;
+}
+.about .about-avatar {
+  width: 15rem;
+}
+
+@media (min-width: 992px) {
+  .about {
+    padding-top: calc(6rem);
+    padding-bottom: 6rem;
+  }
+  .about .about-heading {
+    font-size: 4rem;
+    line-height: 3.5rem;
+  }
+  .about .about-subheading {
+    font-size: 1.5rem;
+  }
+}
+
 .portfolio .portfolio-item {
   cursor: pointer;
   position: relative;
