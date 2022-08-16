@@ -9987,6 +9987,15 @@ h3 {
 .divider-custom-shivang .divider-custom-shivang-line:last-child {
   margin-left: 0rem;
 }
+.divider-custom-shivang .divider-custom-shivang-line:first-child {
+  margin-right: 1rem;
+}
+.divider-custom-shivang .divider-custom-shivang-line:last-child {
+  margin-left: 1rem;
+}
+.divider-custom-shivang.divider-light .divider-custom-shivang-line {
+  background-color: #fff;
+}
 
 .divider-custom {
   margin: 1.25rem 0 1.5rem;
