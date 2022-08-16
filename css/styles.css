@@ -9966,6 +9966,28 @@ h3 {
   }
 }
 
+.divider-custom-shivang {
+  margin: 1.25rem 0 1.5rem;
+  width: 100%;
+  display: flex;
+  justify-content: left;
+  align-items: left;
+}
+.divider-custom-shivang .divider-custom-shivang-line {
+  width: 100%;
+  max-width: 28rem;
+  height: 0.20rem;
+  background-color: #2c3e50;
+  border-radius: 1rem;
+  border-color: #2c3e50 !important;
+}
+.divider-custom-shivang .divider-custom-shivang-line:first-child {
+  margin-right: 1rem;
+}
+.divider-custom-shivang .divider-custom-shivang-line:last-child {
+  margin-left: 0rem;
+}
+
 .divider-custom {
   margin: 1.25rem 0 1.5rem;
   width: 100%;
@@ -10095,7 +10117,7 @@ span:before{
 }
 @keyframes animate{
   0%{
-      content: "Developer";
+      content: "Explorer";
   }
   25%{
       content: "ROBOTICIST";
@@ -10107,7 +10129,7 @@ span:before{
       content: "Researcher";
   }
   100%{
-      content: "Explorer";
+      content: "Developer";
   }
 }
 
