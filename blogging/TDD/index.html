@@ -1,0 +1,367 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog Post - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">Shivang Vijay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Blogs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-8">
+                    <!-- Post content-->
+                    <article>
+                        <center><h1>Test Driven Development (TDD) in Python</h1></center>
+                        <p><br></p>
+                        <h2>Introduction</h2>
+                        <p>TDD is a software development approach in which test cases are developed to specify and validate what the code will do. In simple terms, test cases for each functionality are created and tested first and if the test fails then the new code is written in order to pass the test and make code simple and bug-free.</p>
+                        <p>Test-Driven Development starts with designing and developing tests for every small functionality of an application. TDD framework instructs developers to write new code only if an automated test has failed. This avoids duplication of code.</p>
+                        <p>Test-Driven development is a process of developing and running automated tests before actual development of the application. Hence, TDD is sometimes also called Test First Development.</p>
+                        <p><br></p>
+                        <h2>How to perform TDD Test</h2>
+                        <p><img src="https://lh6.googleusercontent.com/QgGm7xCL9hwp5go3YkDO8bSwpbt-JTxg3zXnsyRYbIG2rJmLZMuemuA81AqI2gHGVyniTiPoVmqfKlGblAg5vhAsMlxjbPj3s-kAOmZ2a9rzPV8_jzANAP0Z23HAUZXZMicrAmwTpcu2R_Df8730yPo" width="448" height="420"></p>
+                        <p><br></p>
+                        <p>Following steps define how to perform TDD test,</p>
+                        <ol>
+                            <li>
+                                <p>Add a test.</p>
+                            </li>
+                            <li>
+                                <p>Run all tests and see if any new test fails.</p>
+                            </li>
+                            <li>
+                                <p>Write some code.</p>
+                            </li>
+                            <li>
+                                <p>Run tests and Refactor code.</p>
+                            </li>
+                            <li>
+                                <p>Repeat.</p>
+                            </li>
+                        </ol>
+                        <p><br></p>
+                        <h2>Acceptance TDD (ATDD)</h2>
+                        <p>With ATDD you write a single acceptance test. This test fulfils the requirement of the specification or satisfies the behaviour of the system. After that write just enough production/functionality code to fulfil that acceptance test. Acceptance test focuses on the overall behaviour of the system.</p>
+                        <p><img src="https://lh3.googleusercontent.com/NmYuACSQiKxq_tI72NfTTSNBRqY69SEx9BDniUHFmMbqJ8HqBffuwuZyYry7tdtJk0aB_0fCf9gOLtVkol2aT9amSooLgj8a3uwCxZBTS4TZRnoJ4w0obt8T37py9qhfHpynvFU0Aloa76nWYwnIj4o" width="724" height="464"></p>
+                        <p><br></p>
+                        <h2>Advantages of TDD</h2>
+                        <p>Following are the main advantages of Test Driven Development in Software Engineering:</p>
+                        <ul>
+                            <li>
+                                <p>Early bug notification.</p>
+                            </li>
+                            <li>
+                                <p>Developers test their code but in the database world, this often consists of manual tests or one-off scripts. Using TDD you build up, over time, a suite of automated tests that you and any other developer can rerun at will.</p>
+                            </li>
+                            <li>
+                                <p>Better Designed, cleaner and more extensible code.</p>
+                            </li>
+                            <li>
+                                <p>It helps to understand how the code will be used and how it interacts with other modules.</p>
+                            </li>
+                            <li>
+                                <p>It results in better design decisions and more maintainable code.</p>
+                            </li>
+                            <li>
+                                <p>TDD allows writing smaller code having single responsibility rather than monolithic procedures with multiple responsibilities. This makes the code simpler to understand.</p>
+                            </li>
+                            <li>
+                                <p>TDD also forces you to write only production code to pass tests based on user requirements.</p>
+                            </li>
+                            <li>
+                                <p>Confidence to Refactor</p>
+                            </li>
+                            <li>
+                                <p>If you refactor code, there can be possibilities of breaks in the code. So having a set of automated tests you can fix those breaks before release. Proper warning will be given if breaks are found when automated tests are used.</p>
+                            </li>
+                            <li>
+                                <p>Using TDD, should result in faster, more extensible code with fewer bugs that can be updated with minimal risks.</p>
+                            </li>
+                            <li>
+                                <p>Good for teamwork</p>
+                            </li>
+                            <li>
+                                <p>In the absence of any team member, other team members can easily pick up and work on the code. It also aids knowledge sharing, thereby making the team more effective overall.</p>
+                            </li>
+                            <li>
+                                <p>Good for Developers</p>
+                            </li>
+                            <li>
+                                <p>Though developers have to spend more time in writing TDD test cases, it takes a lot less time for debugging and developing new features. You will write cleaner, less complicated code.</p>
+                            </li>
+                        </ul>
+                        <p><br></p>
+                        <h2>Which is better &ndash; pytest or unittest?</h2>
+                        <p>Although both the frameworks are great for performing testing in python, pytest is easier to work with. The code in pytest is simple, compact, and efficient.</p>
+                        <p>For unittest, we will have to import modules, create a class and define the testing functions within that class. But for pytest, we only have to define the testing function. Pytest is also fast and efficient.</p>
+                        <p><br></p>
+                        <h2>Pytest FrameWork</h2>
+                        <p>The advantages of Pytest are as follows &minus;</p>
+                        <ul>
+                            <li>
+                                <p>Pytest can run multiple tests in parallel, which reduces the execution time of the test suite.</p>
+                            </li>
+                            <li>
+                                <p>Pytest has its own way to detect the test file and test functions automatically, if not mentioned explicitly.</p>
+                            </li>
+                            <li>
+                                <p>Pytest allows us to skip a subset of the tests during execution.</p>
+                            </li>
+                            <li>
+                                <p>Pytest allows us to run a subset of the entire test suite.</p>
+                            </li>
+                            <li>
+                                <p>Pytest is free and open source.</p>
+                            </li>
+                            <li>
+                                <p>Because of its simple syntax, pytest is very easy to start with.</p>
+                            </li>
+                        </ul>
+                        <p><br></p>
+                        <h2>Pytest - Environment Setup</h2>
+                        <p>To install the latest version of pytest, execute the following command&nbsp;</p>
+                        <div align="left">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>&nbsp;$ pip install pytest</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table><br>
+                        </div>
+                        <h2>Identifying Test files and Test Functions</h2>
+                        <p>Running pytest without mentioning a filename will run all files of format test_*.py or *_test.py in the current directory and subdirectories. Pytest automatically identifies those files as test files. We can make pytest run other filenames by explicitly mentioning them.</p>
+                        <p>Pytest requires the test function names to start with &ldquo;test&rdquo;.&nbsp;Function names which are not of format test* are not considered as test functions by pytest.&nbsp;We cannot explicitly make pytest consider any function not starting with test as a test function.</p>
+                        <p><img src="https://lh6.googleusercontent.com/Cb_f8L0lL2B6VMTrGIXHSlITKNklFumLYv7VEtb9NgIevRwIe_KIVXCa0wtP5zIzNc01etqPxlOBeqBDol2-BO1Bu1l3Hm1wetN3Ih7b-xbmRT5SV2gH9tT-vBnH_m94zFWRuw4UZAHBeD8dkQMhXoE" width="602" height="285"></p>
+                        <p><img src="https://lh6.googleusercontent.com/07S5kZgpwp4fUq_BGSAP87-QLyda4tTPsPsaj2ZK6fZepgC6dDlcHyaISdDS2U3f3LMT6tFAvtLiExCh0VDg2n7M9fI9zpGnnca0PzwKsowpC6TgkLtEvcvDtkxvrJYY6X6CHunIj_xIcXOM1SWuPpc" width="602" height="175"></p>
+                        <p>-v increases the verbosity.</p>
+                        <p><img src="https://lh6.googleusercontent.com/ZiE1lFU7RXUIDjfrwpEWQUawujlnlSFTaO6yem9P1FbCjfxOvdPdyVDYRqjWSW_m0_LmAr8qSx7je-JQVZOsWYgjtkff_39SAjfxwnFGvHhg5o8geHov1mhxPSRTtnn0S6audydNY5zPbCrbIgSYc2s" width="496" height="377"></p>
+                        <p>Note&nbsp;&minus; pytest command will execute all the files of format test_* or *_test in the current directory and subdirectories.</p>
+                        <p>To execute the tests from a specific file, use the following syntax &minus;</p>
+                        <div align="left">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>$ pytest &lt;filename&gt; -v</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table><br>
+                        </div>
+                        <p><img src="https://lh6.googleusercontent.com/23hDYmfrzkGVUDzU_-SUeA4sB9S-alu2iEczd980k6JyceA61SWWRU8O6ZpuncRBbO0mleB2K3EBZxbQUswsUFai_On9HScDVXCKV_8ZyMaGPIRNQTNk4LlLlzG57jONaDyz04ayhs-8AjVZc5FJVuo" width="602" height="101"></p>
+                        <p><br></p>
+                        <h2>Pytest - Fixtures</h2>
+                        <p>Fixtures are functions, which will run before each test function to which it is applied. Fixtures are used to feed some data to the tests such as database connections, URLs to test and some sort of input data. Therefore, instead of running the same code for every test, we can attach a fixture function to the tests and it will run and return the data to the test before executing each test.</p>
+                        <p>A function is marked as a fixture by &minus;</p>
+                        <div align="left">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>@pytest.fixture</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><img src="https://lh4.googleusercontent.com/7UZNg7b56z_HCviWolAGxLdOBc2PjiBK8_r_AxcSyYKuJf-sVLxGkPDhg1XHUY3e_rtCJ8jXtxMlLiAancLdjdr8g-Gk6IGLZ8suEqpyeEBzwvecKNCvmi6GaVaScXhZieAibFEPeoFmb21XtXx3xn4" width="538" height="232"></p>
+                        <p><img src="https://lh5.googleusercontent.com/YOAR-n-oYgddMg68q9Pt-7DVQJTWM_moZ4wKigjA0OX3YiUDtwVlA8SebbZAb8O5M1le04nkXK8PAAgexP9UmWm2a-wkfBBmg4DyqGhomc5X__Zcv-wsuIYUvMpKkyDIoQP4-vVmpL-lKbnO200ypKU" width="680" height="211"></p>
+                        <p><br></p>
+                        <h2>More Important Features of pytest</h2>
+                        <p>The syntax to stop the execution of test suite soon after n number of test fails is as follows&nbsp;</p>
+                        <div align="left">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>$ pytest --maxfail = &lt;num&gt;</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><img src="https://lh3.googleusercontent.com/xIuJGwLEICRofR40RVqlHYXxX8C5Kq3I1zmvrAHmDDJ5o8a1JVt5agTioESYOHRf84QYT3--m--CG2BWbRwiieuYXsVxntxLGyLyH8W_qCMBQhPOt76A6QTApv6cfUcdmNRegtO6zBPJYrH7EnJyPjk" width="602" height="240"></p>
+                        <p><img src="https://lh3.googleusercontent.com/BATiu-mkjgL_OwEDCIOVG7CFxEhdUCF9UdQ5pLJy0p15kaqes7oyQfRVMWvnInAqyMDoCaecDvhSGd23S-mbzNHGe52IeyrQ8p5Y1hccrI8-oHnBGfPj-_8jGVJP8jp6KF28u9Ld8aEgN80s-hPfOyM" width="1172" height="270"></p>
+                        <p>We will now execute the tests from test_multiplcation.py and generate the xml by running.</p>
+                        <div align="left">
+                            <table>
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <p>$ pytest test_max_failure.py -v --junitxml=&quot;result.xml&quot;</p>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <p><br></p>
+                        <h2>Learn More About TDD</h2>
+                        <ul>
+                            <li>
+                                <p><a href="https://www.tutorialspoint.com/pytest/pytest_substring_matching_of_test_names.htm">https://www.tutorialspoint.com/pytest/pytest_substring_matching_of_test_names.htm</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://docs.pytest.org/en/latest/example/markers.html#mark-examples">https://docs.pytest.org/en/latest/example/markers.html#mark-examples</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://stackoverflow.com/questions/60806473/pytestunknownmarkwarning-unknown-pytest-mark-xxx-is-this-a-typo">https://stackoverflow.com/questions/60806473/pytestunknownmarkwarning-unknown-pytest-mark-xxx-is-this-a-typo</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://www.browserstack.com/guide/tdd-vs-bdd-vs-atdd">https://www.browserstack.com/guide/tdd-vs-bdd-vs-atdd</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://realpython.com/pytest-python-testing/">https://realpython.com/pytest-python-testing/</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://docs.pytest.org/en/7.1.x/getting-started.html#continue-reading">https://docs.pytest.org/en/7.1.x/getting-started.html#continue-reading</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://www.xenonstack.com/blog/test-driven-development-python">https://www.xenonstack.com/blog/test-driven-development-python</a></p>
+                            </li>
+                            <li>
+                                <p><a href="https://www.youtube.com/watch?v=iQcimgQohHs">https://www.youtube.com/watch?v=iQcimgQohHs</a></p>
+                            </li>
+                        </ul>
+                        <p><br></p>
+                        <!-- Post header-->
+                        <!-- <header class="mb-4"> -->
+                            <!-- Post title-->
+                            <!-- <h1 class="fw-bolder mb-1">Welcome to Blog Post!</h1> -->
+                            <!-- Post meta content-->
+                            <!-- <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by Start Bootstrap</div> -->
+                            <!-- Post categories-->
+                            <!-- <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
+                        </header> -->
+                        <!-- Preview image figure-->
+                        <!-- <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure> -->
+                        <!-- Post content-->
+                        <!-- <section class="mb-5">
+                            <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>
+                            <p class="fs-5 mb-4">The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.</p>
+                            <p class="fs-5 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
+                            <h2 class="fw-bolder mb-4 mt-5">I have odd cosmic thoughts every day</h2>
+                            <p class="fs-5 mb-4">For me, the most fascinating interface is Twitter. I have odd cosmic thoughts every day and I realized I could hold them to myself or share them with people who might be interested.</p>
+                            <p class="fs-5 mb-4">Venus has a runaway greenhouse effect. I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something bad happened there as well.</p>
+                        </section>
+                    </article> -->
+                    <!-- Comments section-->
+                    <!-- <section class="mb-5">
+                        <div class="card bg-light">
+                            <div class="card-body"> -->
+                                <!-- Comment form-->
+                                <!-- <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form> -->
+                                <!-- Comment with nested comments-->
+                                <!-- <div class="d-flex mb-4"> -->
+                                    <!-- Parent comment-->
+                                    <!-- <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div> -->
+                                        <!-- If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks. -->
+                                        <!-- Child comment 1-->
+                                        <!-- <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
+                                            </div>
+                                        </div> -->
+                                        <!-- Child comment 2-->
+                                        <!-- <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                When you put money directly to a problem, it makes a good headline.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- Single comment-->
+                                <!-- <div class="d-flex">
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div>
+                                        When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+                <!-- </div> -->
+                <!-- Side widgets-->
+                <!-- <div class="col-lg-4"> -->
+                    <!-- Search widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Categories widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Web Design</a></li>
+                                        <li><a href="#!">HTML</a></li>
+                                        <li><a href="#!">Freebies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">JavaScript</a></li>
+                                        <li><a href="#!">CSS</a></li>
+                                        <li><a href="#!">Tutorials</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Side widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Side Widget</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                    </div> -->
+                </div>
+            </div>
+        </div> 
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Shivang Vijay 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>

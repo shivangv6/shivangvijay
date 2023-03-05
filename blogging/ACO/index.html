@@ -1,0 +1,270 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog Post - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">Shivang Vijay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../../index.html">Home</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Blogs</a></li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-7">
+                    <!-- Post content-->
+                    <article>
+                        <center><h1>Ant Colony Optimization (ACO) in Path Planning of Robots</h1></center>
+                        <p><br></p>
+                        
+                        <h2>Introduction</h2>
+                        <p>The original idea of ACO comes from observing the exploitation of food resources among ants, in which ants&rsquo; individually with limited cognitive abilities have collectively been able to find the shortest path between a food source and the nest [T. S. Marco Dorigo, Ant Colony Optimization, London: Bradford Book, The MIT Press Cambridge., 2004].</p>
+                        <p>Ants navigate from the nest to the food source. They eventually find the shortest path to the food source in spite of Ants being blind. In the beginning, ants start moving randomly in the environment. Ants deposit pheromone on the path as they move. Pheromone slowly evaporates with time. Due to this behaviour when more and more ants start moving in the environment randomly, ants that actually had a quicker time to food source have stronger pheromone deposits. This increases the probability of that path being followed.&nbsp;</p>
+                        <p><br></p>
+                        <p><img src="https://lh5.googleusercontent.com/ROuiIYS6f8mClJ390DnZWSrR0hc0GQZFubMIKiogmJfcXrDQGR0A9iisztoudpkU9obH81yFE_YESind7Yx0tUlTaTK7oQPiHGtZ8_Q-YbAJ_5YuxFlvMIlvqITUVdxTJ9quJDOsPk-EyWGDeuZ47w" width="241" height="123"></p>
+                        <p><br></p>
+                        <h2>ACO Layer for Path Selection</h2>
+                        <p>Using this behaviour of ants guided by pheromones in a different way in Path Planner of&nbsp;automated guided vehicles&nbsp;(AGVs). Computing the shortest paths from source to destination in a grid-type layout can be easily done with A* based algorithms. We often have multiple paths from source to destination. While choosing between various paths, the waiting time of robots due to congestion needs to be accounted for in productivity calculations. The pheromones in a particular path, for us, are the cost (waiting time) of taking that path. To reduce the overall cycle time, since we are using the path with least pheromones.</p>
+                        <p>The pheromone values are a function of time. We can accurately predict the pheromone of the segment at different instances of time and as the position of existing robots in the system can be known, we can easily compute the probable pheromone on each grid on a different quantum of time, in a very deterministic way.</p>
+                        <ul>
+                            <li>
+                                <p>Each highway, service lane and junction acts like an edge having its own identity. The cost of these edges or segments plays an important role in path selection</p>
+                            </li>
+                        </ul>
+                        <p><img class="center" src="https://lh4.googleusercontent.com/DWr9n34zcylQ0NRKvQduC0KpJnJDhO7h9c-_yvmosgH49BFNxrBnntUxVstjYMcSUmj2BRBOVi7XDF0tynZAEOxKg_FhT8gVRbBUShZQchnPzKzd_ipl46SMdEj_OBjDF_4uR06pApCc" width="524" height="145"></p>
+                        <ul>
+                            <li>
+                                <p>Each time a robot selects a segment with a certain probability, it drops a pheromone on that segment. The pheromone intensity to be dropped in each segment of a potential path of a robot, is a function of the probability of the robot taking that segment. For each potential path, the relative costs can be converted into a probability of taking that path and its segments.&nbsp;</p>
+                            </li>
+                        </ul>
+                        <p>&nbsp; &nbsp;&nbsp;<img class="center" src="https://lh3.googleusercontent.com/oWZT9qmjgpOcV9LAqrTFPHBT7e9Q1kF1U_basHeymPgyg6Ri6e_7HgW3h4lHC5dRh0rwzoCOjKKanKmLb0sCWqJPH5neCmLv_n01wcUO0MiRx1mg3lACCezcMNUZ0p0YY48CxzRZbWog" width="537" height="63"></p>
+                        <p><br></p>
+                        <ul>
+                            <li>
+                                <p>Basic path planning for a typical robot is done using Dijkstra&rsquo;s or similar algorithms, which give out multiple paths and their respective costs. The best path is selected using the probability function of the ACO, which accounts for the costs of the paths and the cumulative current pheromone values of each segment in the path. At every junction, a robot&rsquo;s path is reevaluated again, considering the updated pheromone values of the system at that instant. &nbsp;</p>
+                            </li>
+                        </ul>
+                        <p><img class="center" src="https://lh6.googleusercontent.com/NH3g2Y0YggkZyz_KB0elFdjuzqxtZtjxinnJX886qcL4517DaRn0Arma0cefZNjhBfzWqa5d5u1PFfsPnqoO6G9HPEcWje4w8Z-g_uA8541oQo-8F2v9UNIoI1kQ20LBqWkvtCo7Zbkf" width="579" height="171"></p>
+                        <ul>
+                            <li>
+                                <p>The powers &alpha; and &beta; are constants varied to achieve a balance between the impact of congestion and cost of the different paths. A typical ACO algorithm has both values positive. Particularly in our system, the layout is simple and the impact of congestion increases significantly with more robots added in. A negative &alpha; helps in avoiding segments with heavy traffic. Hence, we call the algorithm a Negative &alpha; ACO.</p>
+                            </li>
+                            <li>
+                                <p>Once a robot selects a particular path, the immediate segment probability changes to 1, and the probability of the segments which were rejected becomes 0. Similarly, the probability of the subsequent segments of all the potential paths are also corrected and their pheromone values are updated.</p>
+                            </li>
+                            <li>
+                                <p>The total pheromone value of each segment is the summation of the pheromone intensity of each robot potentially taking that segment.</p>
+                            </li>
+                        </ul>
+                        <p><img class="center" src="https://lh5.googleusercontent.com/z9QP8kcq3eFOmpm3ALALX8shlroTNco8rO2mgxhY_5MTbfLQsOfl5k1Hc-6rson-d88bhpJX48sLt_XRa9RELLV_Oh9oyprhjs7rIRpR0X3llcyPfjah9ynbT_pD9fAg1EM28VM-msWi" width="463" height="105"></p>
+                        <ul>
+                            <li>
+                                <p>The evaporation constant accounts for the balance between the historic trends of the system and the dynamic nature or the randomness of the system. An optimal value can be arrived at with a DOE approach.&nbsp;</p>
+                            </li>
+                        </ul>
+                        <p><br></p>
+                        <h2>ACO based Multi-Robot Path Planner contains 2 main components:</h2>
+                        <ol>
+                            <li>
+                                <p>Cost Map:&nbsp;It is the data structure holding the heuristic length information for each segment in the system map. This map is static and doesn&rsquo;t change with time.</p>
+                            </li>
+                            <li>
+                                <p>Pheromone Map:&nbsp;It is the data structure holding the pheromone information for each segment in the system map. This map keeps changing over time.</p>
+                            </li>
+                        </ol>
+                        <p><br></p>
+                        <h2>WHY ACO?</h2>
+                        <ol>
+                            <li>
+                                <p>Efficiency:&nbsp;ACO algorithms are highly efficient due to their probabilistic nature, which allows them to explore the search space in an intelligent and adaptive way. Ants deposit pheromones on the paths they travel, and these pheromones evaporate over time. As a result, the paths that are frequently travelled by the ants with food are reinforced with stronger pheromone trails. This reinforcement process guides the ants towards the shortest path to the food source. Similarly, in an ACO algorithm, the pheromone trail represents the quality of a solution and the algorithm updates the pheromone trails based on the quality of the solutions found. This encourages the algorithm to focus on promising solutions and avoid exploring unpromising solutions, which makes the algorithm more efficient.</p>
+                            </li>
+                            <li>
+                                <p>Robustness:&nbsp;ACO algorithms are highly robust and can handle noisy or incomplete data. This is because the algorithm is designed to adapt to changes in the environment or problem domain. In an ant colony, individual ants may become disoriented or lost, but the colony as a whole is able to find the food source by collectively exploring the environment. Similarly, in an ACO algorithm, individual ants may get stuck in local optima, but the algorithm as a whole is able to find the global optima by exploring the search space in a collaborative and adaptive manner.</p>
+                            </li>
+                            <li>
+                                <p>Flexibility:&nbsp;ACO algorithms are highly flexible and can be applied to a wide range of optimization problems. They are not restricted to any particular domain and can be used to solve problems in transportation, logistics, scheduling, telecommunications, and many other areas.</p>
+                            </li>
+                            <li>
+                                <p>Global Optimization:&nbsp;ACO algorithms are capable of finding global optima, which is a major advantage over other optimization methods that can only find local optima. This is because the pheromone trails guide the algorithm towards promising solutions and discourage it from exploring unpromising solutions. Over time, the algorithm converges towards the best solution found, which is often the global optima.</p>
+                            </li>
+                            <li>
+                                <p>Scalability:&nbsp;ACO algorithms can be easily parallelized, which makes them suitable for solving large-scale optimization problems. By dividing the search space into smaller subspaces and running the algorithm on each subspace independently, the overall computational time can be reduced significantly. This makes ACO particularly useful for solving problems that involve a large number of variables or constraints.</p>
+                            </li>
+                            <li>
+                                <p>User-Friendly:&nbsp;ACO algorithms are relatively easy to understand and implement. Unlike other optimization methods that require complex mathematical equations or advanced programming skills, ACO can be implemented using simple programming techniques and a basic understanding of the underlying principles. This makes ACO accessible to a wide range of users, including researchers, students, and practitioners.</p>
+                            </li>
+                        </ol>
+                        <p><br></p>
+                        <h2>Approach</h2>
+                        <p>To illustrate a simplified version of the approach, consider the layout shown below, where a robot starting from the BLUE DOT has the destination as the RED DOT.&nbsp;</p>
+                        <p><img src="https://lh5.googleusercontent.com/B6fdGeGpBmE2nClGbPTFkSkL66Du_a1EEhSNKG0VcW8mduz-0gMZ2P3V9Tkr0WgLYkOUZn9sff7zsgQ7N9kIrXD1HWHl3nKFEzHKQ-ogzGz0Pzv65pr1E6cO4_yA3SMCcO_UBVGWm-P4zsJqJq7X0Q" width="200.99614238739014" height="225.99614548683167"><img src="https://lh3.googleusercontent.com/KgNEImPVyJS_JZ5HAznlNse5kHPfyfkvPoYBZDb3Cba4JHGBK-7xbgC-z_uPAfwDoUhJN5Acn6EkRD5Sbdd0KX-y743YRUrv1dTCKUYEWxkdidGGFVBkRxv37JPXxTkfgkNRvjAuENm2ecfVa53slw" width="226.40110301971436" height="250.75711691379547"><img src="https://lh4.googleusercontent.com/oNsIi4vYtXySgPUPdAIY4awn83JymJ2t8zRK2ToyvrWjLGh8FcS6OjKAmD0vI16DOOs182ZPUtFIHLkFM4yG7_eBLbzF_rvCHV3JqEg2vKDrmIpKi2ca6u5F9i-yRuAnxDMvooQoD0MG0hZW8154zg" width="202.49820518493652" height="228.07153165340424"></p>
+                        <p>&nbsp; &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;&nbsp;Basic Layout&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp; &nbsp; &nbsp;Optimal Path selection&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp; &nbsp;&nbsp;&nbsp; &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Re-routing</p>
+                        <ul>
+                            <li>
+                                <p>In the second image, multiple paths with low travel distance, as narrowed down by Dijkstra&apos;s algorithm, are highlighted as potential paths that the robot can take to reach the destination.&nbsp;</p>
+                            </li>
+                            <li>
+                                <p>Using the ACO algorithm, we arrive at the most optimal path (highlighted in green), or the path with the combination of least total congestion and cost.&nbsp;</p>
+                            </li>
+                            <li>
+                                <p>As the robot finishes the first segment, and reaches junction C, the system reevaluates the available paths and the ACO algorithm now identifies a different path to be most optimal. This approach is more advanced, I call it &ldquo;Junction based replanning with ACO&rdquo;.</p>
+                            </li>
+                        </ul>
+                        <p><br></p>
+                        <h2>Summary</h2>
+                        <ol>
+                            <li>
+                                <p>ACO algorithm, which is inspired by the behavioural patterns of ants navigating from their nest to the food source. In spite of Ants being blind, they navigate from the nest to the food source by eventually finding the shortest path by depositing pheromones on the path as they move. Pheromone slowly evaporates with time and hence paths with quicker time to the food source have stronger pheromone deposits. This increases the probability of that path being followed.&nbsp;</p>
+                            </li>
+                        </ol>
+                        <ol start="2">
+                            <li>
+                                <p>Setup with 100s of robots moving together, along with the distance, congestion plays a big role in robot cycle time. Using the pheromone concept to account for Real Time Congestion and a modification in the probability function of the ACO, I arrive at the most optimal path or the path with the combination of least total congestion and cost.&nbsp;</p>
+                            </li>
+                        </ol>
+                        <ol start="3">
+                            <li>
+                                <p>ACO has been successfully applied to a wide range of optimization problems, including the travelling salesman problem, the vehicle routing problem, and the job shop scheduling problem. The algorithm has several advantages over other optimization algorithms, including its ability to handle multiple objectives, constraints, and uncertainties. It is also designed to find the global optimum solution, rather than getting stuck in local optima.</p>
+                            </li>
+                        </ol>
+                        <ol start="4">
+                            <li>
+                                <p>ACO has been extended and modified in various ways to improve its performance and applicability. For example, Ant System (AS) is a variant of ACO that uses a simple pheromone update rule and a stochastic decision rule. Ant Colony System (ACS) is another variant that uses local search and an additional pheromone trail to guide the ants. MAX-MIN Ant System (MMAS) is a variant that uses a dynamic pheromone trail update rule to balance exploration and exploitation. Additionally, ACO has been combined with other optimization algorithms, such as genetic algorithms and particle swarm optimization, to create hybrid optimization algorithms.</p>
+                            </li>
+                        </ol>
+                        <!-- Post header-->
+                        <!-- <header class="mb-4"> -->
+                            <!-- Post title-->
+                            <!-- <h1 class="fw-bolder mb-1">Welcome to Blog Post!</h1> -->
+                            <!-- Post meta content-->
+                            <!-- <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by Start Bootstrap</div> -->
+                            <!-- Post categories-->
+                            <!-- <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
+                        </header> -->
+                        <!-- Preview image figure-->
+                        <!-- <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure> -->
+                        <!-- Post content-->
+                        <!-- <section class="mb-5">
+                            <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>
+                            <p class="fs-5 mb-4">The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.</p>
+                            <p class="fs-5 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
+                            <h2 class="fw-bolder mb-4 mt-5">I have odd cosmic thoughts every day</h2>
+                            <p class="fs-5 mb-4">For me, the most fascinating interface is Twitter. I have odd cosmic thoughts every day and I realized I could hold them to myself or share them with people who might be interested.</p>
+                            <p class="fs-5 mb-4">Venus has a runaway greenhouse effect. I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something bad happened there as well.</p>
+                        </section>
+                    </article> -->
+                    <!-- Comments section-->
+                    <!-- <section class="mb-5">
+                        <div class="card bg-light">
+                            <div class="card-body"> -->
+                                <!-- Comment form-->
+                                <!-- <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form> -->
+                                <!-- Comment with nested comments-->
+                                <!-- <div class="d-flex mb-4"> -->
+                                    <!-- Parent comment-->
+                                    <!-- <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div> -->
+                                        <!-- If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks. -->
+                                        <!-- Child comment 1-->
+                                        <!-- <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
+                                            </div>
+                                        </div> -->
+                                        <!-- Child comment 2-->
+                                        <!-- <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                When you put money directly to a problem, it makes a good headline.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- Single comment-->
+                                <!-- <div class="d-flex">
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div>
+                                        When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+                <!-- </div> -->
+                <!-- Side widgets-->
+                <!-- <div class="col-lg-4"> -->
+                    <!-- Search widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Categories widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Web Design</a></li>
+                                        <li><a href="#!">HTML</a></li>
+                                        <li><a href="#!">Freebies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">JavaScript</a></li>
+                                        <li><a href="#!">CSS</a></li>
+                                        <li><a href="#!">Tutorials</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Side widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Side Widget</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                    </div> -->
+                </div>
+            </div>
+        </div> 
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Shivang Vijay 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
