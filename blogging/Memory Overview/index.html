@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+        <meta name="description" content="" />
+        <meta name="author" content="" />
+        <title>Blog Post - Start Bootstrap Template</title>
+        <!-- Favicon-->
+        <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+        <!-- Core theme CSS (includes Bootstrap)-->
+        <link href="css/styles.css" rel="stylesheet" />
+    </head>
+    <body>
+        <!-- Responsive navbar-->
+        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+            <div class="container">
+                <a class="navbar-brand" href="../../index.html">Shivang Vijay</a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                        <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                        <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+                        <!-- <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Blogs</a></li> -->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- Page content-->
+        <div class="container mt-5">
+            <div class="row">
+                <div class="col-lg-7">
+                    <!-- Post content-->
+                    <article>
+                        <center><h1>Memory Types</h1></center>
+<p><br></p>
+
+<h2>Memory Addresses and Hexadecimal Numbers</h2>
+<p>Understanding the number system used by computers to store and process data is essential for effective memory management, which is why we will start with an introduction into the binary and hexadecimal number systems and the structure of memory addresses.</p>
+<p>Early attempts to invent an electronic computing device met with disappointing results as long as engineers and computer scientists tried to use the decimal system. One of the biggest problems was the low distinctiveness of the individual symbols in the presence of&nbsp;<a href="https://en.wikipedia.org/wiki/Noise_%28electronics%29">noise</a>. A &apos;symbol&apos; in our alphabet might be a letter in the range A-Z while in our decimal system it might be a number in the range 0-9. The more symbols there are, the harder it can be to differentiate between them, especially when there is electrical interference. After many years of research, an early pioneer in computing, John Atanasoff, proposed to use a coding system that expressed numbers as sequences of only two digits: one by the presence of a charge and one by the absence of a charge. This numbering system is called Base 2 or binary and it is represented by the digits 0 and 1 (called &apos;bit&apos;) instead of 0-9 as with the decimal system. Differentiating between only two symbols, especially at high frequencies, was much easier and more robust than with 10 digits. In a way, the ones and zeros of the binary system can be compared to Morse Code, which is also a very robust way to transmit information in the presence of much interference. This was one of the primary reasons why the binary system quickly became the standard for computing.</p>
+<p>Inside each computer, all numbers, characters, commands and every imaginable type of information are represented in binary form. Over the years, many coding schemes and techniques were invented to manipulate these 0s and 1s effectively. One of the most widely used schemes is called ASCII (American Standard Code for Information Interchange), which lists the binary code for a set of 127 characters. The idea was to represent each letter with a sequence of binary numbers so that storing texts in computer memory and on hard (or floppy) disks would be possible.</p>
+<p>The film enthusiasts among you might know the scene in the hit movie &quot;The Martian&quot; with Mat Daemon, in which an ASCII table plays an important role in the rescue from Mars.</p>
+<p>The following figure shows an ASCII table, where each character (rightmost column) is associated with an 8-digit binary number:</p>
+<p><img src="../img/ascii-table-black.png" width="624" height="481"></p>
+<p><br></p>
+<p>In addition to the decimal number (column &quot;Dec&quot;) and the binary number, the ASCII table provides a third number for each character (column &quot;Hex&quot;). According to the table above, the letter&nbsp;z&nbsp;is referenced by the decimal number&nbsp;122, by the binary number&nbsp;0111 1010&nbsp;and by&nbsp;7A. You have probably seen this type of notation before, which is called &quot;hexadecimal&quot;. Hexadecimal (hex) numbers are used often in computer systems, e.g for displaying memory readouts - which is why we will look into this topic a little bit deeper. Instead of having a base of 2 (such as binary numbers) or a base of 10 (such as our conventional decimal numbers), hex numbers have a base of 16. The conversion between the different numbering systems is a straightforward operation and can be easily performed with any scientific calculator. More details on how to do this can e.g. be found&nbsp;<a href="https://en.wikipedia.org/wiki/Computer_number_format">here</a>.</p>
+<p>There are several reasons why it is preferable to use hex numbers instead of binary numbers (which computers store at the lowest level), three of which are given below:</p>
+<ul>
+    <li>
+        <p>Readability: It is significantly easier for a human to understand hex numbers as they resemble the decimal numbers we are used to. It is simply not intuitive to look at binary numbers and decide how big they are and how they relate to another binary number.</p>
+    </li>
+    <li>
+        <p>Information density: A hex number with two digits can express any number from 0 to 255 (because 16^2 is 256). To do the same in the binary system, we would require 8 digits. This difference is even more pronounced as numbers get larger and thus harder to deal with.</p>
+    </li>
+    <li>
+        <p>Conversion into bytes: Bytes are units of information consisting of 8 bits. Almost all computers are byte-addressed, meaning all memory is referenced by byte, instead of by bit. Therefore, using a counting system that can easily convert into bytes is an important requirement. We will shortly see why grouping bits into a byte plays a central role in understanding how computer memory works.</p>
+    </li>
+</ul>
+<p>The reason why early computer scientists have decided to not use decimal numbers can also be seen in the figure below. In these days (before pocket calculators were widely available), programers had to interpret computer output in their head on a regular basis. For them, it was much easier and quicker to look at and interpret&nbsp;7E&nbsp;instead of&nbsp;0111 1110. Ideally, they would have used the decimal system, but the conversion between base 2 and base 10 is much harder than between base 2 and base 16. Note in the figure that the decimal system&apos;s digit transitions never match those of the binary system. With the hexadecimal system, which is based on a multiple of 2, digit transitions match up each time, thus making it much easier to convert quickly between these numbering systems.</p>
+<p><img alt="Image showing increase in number of digits required to express numbers in different number systems." src="https://lh5.googleusercontent.com/YFfTySMELVyX0QMkRvTbTvlFilWJcjF6IhdtUSLok_qH0xFyrOo8CeS5frRLHKFqBt8-7F5Mye8w_V23qT2ZYLImFoSeQqmodxWS3wx_20YB9VNndj8ru62NFpUaCRXjSfwJ6MoXS4Mfgbyvo5LqZTA" width="1080" height="190"></p>
+<p>Each dot represents an increase in the number of digits required to express a number in different number systems. For base 2, this happens at 2, 4, 8, 32, 64, 128 and 256. The red dots indicate positions where several numbering systems align. Note that there are breaks in the number line to conserve space.</p>
+<p><br></p>
+<p><br></p>
+<h2>Types of Computer Memory</h2>
+<p><br></p>
+<p>Below you will find a small list of some common memory types that you will surely have heard of:</p>
+<ul>
+    <li>
+        <p>RAM / ROM</p>
+    </li>
+    <li>
+        <p>Cache (L1, L2)</p>
+    </li>
+    <li>
+        <p>Registers</p>
+    </li>
+    <li>
+        <p>Virtual Memory</p>
+    </li>
+    <li>
+        <p>Hard Disks, USB drives</p>
+    </li>
+</ul>
+<p>Let us look into these types more deeply: When the CPU of a computer needs to access memory, it wants to do this with minimal latency. Also, as large amounts of information need to be processed, the available memory should be sufficiently large with regard to the tasks we want to accomplish.</p>
+<p>Regrettably though, low latency and large memory are not compatible with each other (at least not at a reasonable price). In practice, the decision for low latency usually results in a reduction of the available storage capacity (and vice versa). This is the reason why a computer has multiple memory types that are arranged hierarchically. The following pyramid illustrates the principle:</p>
+<p><img alt="A pyramid representing latency and size of different kinds of computer memory (Bottom is largest and slowest)." src="https://lh5.googleusercontent.com/b9ULpqt7qdadGwKctQDvpMWdDrCoWI-tNUEkxHMd6n9TLzT-qinJHhz8S3UdYZXERLdSWt8aMd8C1S08_plynR3Xitrgo_c4YZaPe6ROQQY1dx1GMv6Q9qtqMnAcEq4xICWjTKgBeSS5Rr1OqMLeyh4" width="402" height="362"></p>
+<p>Computer memory latency and size hierarchy.</p>
+<p><br></p>
+<p>As you can see, the CPU and its ultra-fast (but small) registers used for short-term data storage reside at the top of the pyramid. Below are Cache and RAM, which belong to the category of temporary memory which quickly loses its content once power is cut off. Finally, there are permanent storage devices such as the ROM, hard drives as well as removable drives such as USB sticks.</p>
+<p>Let us take a look at a typical computer usage scenario to see how the different types of memory are used:</p>
+<ul>
+    <li>
+        <p>After switching on the computer, it loads data from its read-only memory (ROM) and performs a power-on self-test (POST) to ensure that all major components are working properly. Additionally, the computer memory controller checks all of the memory addresses with a simple read/write operation to ensure that memory is functioning correctly.</p>
+    </li>
+    <li>
+        <p>After performing the self-test, the computer loads the basic input/output system (BIOS) from ROM. The major task of the BIOS is to make the computer functional by providing basic information about such things as storage devices, boot sequence, security or auto device recognition capability.</p>
+    </li>
+    <li>
+        <p>The process of activating a more complex system on a simple system is called &quot;bootstrapping&quot;: It is a solution for the chicken-egg-problem of starting a software-driven system by itself using software. During bootstrapping, the computer loads the operating system (OS) from the hard drive into random access memory (RAM). RAM is considered &quot;random access&quot; because any memory cell can be accessed directly by intersecting the respective row and column in the matrix-like memory layout. For performance reasons, many parts of the OS are kept in RAM as long as the computer is powered on.</p>
+    </li>
+    <li>
+        <p>When an application is started, it is loaded into RAM. However, several application components are only loaded into RAM on demand to preserve memory. Files that are opened during runtime are also loaded into RAM. When a file is saved, it is written to the specified storage device. After closing the application, it is deleted from RAM.</p>
+    </li>
+</ul>
+<p>This simple usage scenario shows the central importance of the RAM. Every time data is loaded or a file is opened, it is placed into this temporary storage area - but what about the other memory types above the RAM layer in the pyramid?</p>
+<p>To maximize CPU performance, fast access to large amounts of data is critical. If the CPU cannot get the data it needs, it stops and waits for data availability. Thus, when designing new memory chips, engineers must adapt to the speed of the available CPUs. The problem they are facing is that memory which is able to keep up with modern CPUs running at several GHz is extremely expensive. To combat this, computer designers have created the memory tier system which has already been shown in the pyramid diagram above. The solution is to use expensive memory in small quantities and then back it up using larger quantities of less expensive memory.</p>
+<p>The cheapest form of memory available today is the hard disk. It provides large quantities of inexpensive and permanent storage. The problem of a hard disk is its comparatively low speed - even though access times with modern solid state disks (SSD) have decreased significantly compared to older magnetic-disc models.</p>
+<p>The next hierarchical level above hard disks or other external storage devices is the RAM. We will not discuss in detail how it works but only take a look at some key performance metrics of the CPU at this point, which place certain performance expectations on the RAM and its designers:</p>
+<ul>
+    <li>
+        <p>The&nbsp;bit size&nbsp;of the CPU decides how many bytes of data it can access in RAM memory at the same time. A 16-bit CPU can access 2 bytes (with each byte consisting of 8 bit) while a 64-bit CPU can access 8 bytes at a time.</p>
+    </li>
+    <li>
+        <p>The&nbsp;processing speed&nbsp;of the CPU is measured in Gigahertz or Megahertz and denotes the number of operations it can perform in one second.</p>
+    </li>
+</ul>
+<p>From processing speed and bit size, the data rate required to keep the CPU busy can easily be computed by multiplying bit size with processing speed. With modern CPUs and ever-increasing speeds, the available RAM in the market will not be fast enough to match the CPU data rate requirements.</p>
+<h2>Cache Memory</h2>
+<h3>Cache Levels</h3>
+<p>Cache memory is much faster but also significantly smaller than standard RAM. It holds the data that will (or might) be used by the CPU more often. In the memory hierarchy we have seen in the last section, the cache plays an intermediary role between fast CPU and slow RAM and hard disk. The figure below gives a rough overview of a typical system architecture:</p>
+<p><img src="https://lh5.googleusercontent.com/HcYjPntkZBZnAwfIpsF2lhvMulXIo3fB5qB1vNFu9Z3Uo4NW_mhVtvo0-EQzB0I9_1PeG90LMceWOO02HN5YFfDEOCX8mQAaaTdjtXFcvpNIAoCCLN50AgdgW_T8TlF2EyRKvzJyK5prwnI21nXK7ao" width="624" height="213"></p>
+<p>System architecture diagram showing caches, ALU (arithmetic logic unit), main memory, and the buses connected each component.</p>
+<p>The central CPU chip is connected to the outside world by a number of buses. There is a cache bus, which leads to a block denoted as L2 cache, and there is a system bus as well as a memory bus that leads to the computer main memory. The latter holds the comparatively large RAM while the L2 cache as well as the L1 cache are very small with the latter also being a part of the CPU itself.</p>
+<p>The concept of L1 and L2 (and even L3) cache is further illustrated by the following figure, which shows a multi-core CPU and its interplay with L1, L2 and L3 caches:</p>
+<p><img alt="Diagram showing L1, L2, and L3 cache on a CPU chip with bus to main memory." src="https://lh5.googleusercontent.com/UdZk0KHWIxbz4yEPEXiGtQBaIlQFBHfMQttalYJyWV6zocHQqwEIUFciaccCwcC09XIiUozIioBh8hQm1TBuppXhdxnVSE_haFJaa_RdJUQl2Mv1hcCFTkBCRWI8hISuLpETWu1YAainF4ULG66yQ4g" width="624" height="307"></p>
+<p>L1, L2, and L3 cache</p>
+<ul>
+    <li>
+        <p>Level 1 cache&nbsp;is the fastest and smallest memory type in the cache hierarchy. In most systems, the L1 cache is not very large. Mostly it is in the range of 16 to 64 kBytes, where the memory areas for instructions and data are separated from each other (L1i and L1d, where &quot;i&quot; stands for &quot;instruction&quot; and &quot;d&quot; stands for &quot;data&quot;. Also see &quot;<a href="https://en.wikipedia.org/wiki/Harvard_architecture">Harvard architecture</a>&quot; for further reference). The importance of the L1 cache grows with increasing speed of the CPU. In the L1 cache, the most frequently required instructions and data are buffered so that as few accesses as possible to the slow main memory are required. This cache avoids delays in data transmission and helps to make optimum use of the CPU&apos;s capacity.</p>
+    </li>
+    <li>
+        <p>Level 2 cache&nbsp;is located close to the CPU and has a direct connection to it. The information exchange between L2 cache and CPU is managed by the L2 controller on the computer main board. The size of the L2 cache is usually at or below 2 megabytes. On modern multi-core processors, the L2 cache is often located within the CPU itself. The choice between a processor with more clock speed or a larger L2 cache can be answered as follows: With a higher clock speed, individual programs run faster, especially those with high computing requirements. As soon as several programs run simultaneously, a larger cache is advantageous. Usually normal desktop computers with a processor that has a large cache are better served than with a processor that has a high clock rate.</p>
+    </li>
+    <li>
+        <p>Level 3 cache&nbsp;is shared among all cores of a multicore processor. With the L3 cache, the&nbsp;<a href="https://en.wikipedia.org/wiki/Cache_coherence">cache coherence</a> protocol of multicore processors can work much faster. This protocol compares the caches of all cores to maintain data consistency so that all processors have access to the same data at the same time. The L3 cache therefore has less the function of a cache, but is intended to simplify and accelerate the cache coherence protocol and the data exchange between the cores.</p>
+    </li>
+</ul>
+<h3>Temporal and Spatial Locality</h3>
+<p>The following table presents a rough overview of the latency of various memory access operations. Even though these numbers will differ significantly between systems, the order of magnitude between the different memory types is noteworthy. While L1 access operations are close to the speed of a photon traveling at light speed for a distance of 1 foot, the latency of L2 access is roughly one order of magnitude slower already while access to main memory is two orders of magnitude slower.</p>
+<p><img src="https://lh4.googleusercontent.com/gvzlBTIGB7hYoFI99hJUJySSt3SEaYe51ICP_vVqLh0Tsv4pIkO1q0Fji511lTYgG_Z-NLHJrxmOHMNbVuryfjTDbaNtoBehLz5opqZciMNWxGhqrD2sIIs04IZvVda6B3C6KtDwjBbBjrn0qhx3Iv0" width="624" height="345"></p>
+<p>Originally from Peter Norvig:&nbsp;<a href="http://norvig.com/21-days.html#answers">http://norvig.com/21-days.html#answers</a></p>
+<p><br></p>
+<p>In algorithm design, programmers can exploit two principles to increase runtime performance:</p>
+<ul>
+    <li>
+        <p>Temporal locality&nbsp;means that address ranges that are accessed are likely to be used again in the near future. In the course of time, the same memory address is accessed relatively frequently (e.g. in a loop). This property can be used at all levels of the memory hierarchy to keep memory areas accessible as quickly as possible.</p>
+    </li>
+    <li>
+        <p>Spatial locality&nbsp;means that after an access to an address range, the next access to an address in the immediate vicinity is highly probable (e.g. in arrays). In the course of time, memory addresses that are very close to each other are accessed again multiple times. This can be exploited by moving the adjacent address areas upwards into the next hierarchy level during a memory access.</p>
+    </li>
+</ul>
+<p><br></p>
+<h2>Virtual Memory</h2>
+<p><br></p>
+<h3>Problems with physical memory</h3>
+<p>Virtual memory is a very useful concept in computer architecture because it helps with making your software work well given the configuration of the respective hardware on the computer it is running on.</p>
+<p>The idea of virtual memory stems back from a (not so long ago) time, when the random access memory (RAM) of most computers was severely limited. Programers needed to treat memory as a precious resource and use it most efficiently. Also, they wanted to be able to run programs even if there was not enough RAM available. At the time of writing (August 2019), the amount of RAM is no longer a large concern for most computers and programs usually have enough memory available to them. But in some cases, for example when trying to do video editing or when running multiple large programs at the same time, the RAM memory can be exhausted. In such a case, the computer can slow down drastically.</p>
+<p>There are several other memory-related problems, that programmers need to know about:</p>
+<ul>
+    <li>
+        <p>Holes in address space&nbsp;: If several programs are started one after the other and then shortly afterwards some of these are terminated again, it must be ensured that the freed-up space in between the remaining programs does not remain unused. If memory becomes too fragmented, it might not be possible to allocate a large block of memory due to a large-enough free contiguous block not being available any more.</p>
+    </li>
+    <li>
+        <p>Programs writing over each other&nbsp;: If several programs are allowed to access the same memory address, they will overwrite each others&apos; data at this location. In some cases, this might even lead to one program reading sensitive information (e.g. bank account info) that was written by another program. This problem is of particular concern when writing concurrent programs which run several threads at the same time.</p>
+    </li>
+</ul>
+<p>The basic idea of virtual memory is to separate the addresses a program may use from the addresses in physical computer memory. By using a mapping function, an access to (virtual) program memory can be redirected to a real address which is guaranteed to be protected from other programs.</p>
+<p><br></p>
+<p><br></p>
+<h3>Expanding the available memory</h3>
+<p>What would happen if the available physical memory was below the upper bound imposed by the architecture? The following figure illustrates the problem for such a case:</p>
+<p><img alt="Diagram showing situation where physical memory is less than the upper bound imposed by the architecture." src="https://lh4.googleusercontent.com/7C4e3mujM3crWJQ-1bcULIDMsoLMkAACUITKeLl8zwxhJz35fhy_EEEGgFfZS5ECfO0EWOZq9Hu1eXk6UqCByvk6a1HykgxzTcIv87R6ArdQOKTruhlaSi2PrZ5cPlgKYPFyBGlwK7Wgg2g--0Y5YJw" width="624" height="301"></p>
+<p>In the image above, the available physical memory is less than the upper bound provided by the 32-bit address space.</p>
+<p><br></p>
+<p>On a typical architecture such as MIPS (&quot;Microprocessor without interlocked pipeline stages&quot;), each program is promised to have access to an address space ranging from 0x00000000 up to 0xFFFFFFFF. If however, the available physical memory is only 1GB in size, a 1-on-1 mapping would lead to undefined behavior as soon as the 30-bit RAM address space was exceeded.</p>
+<p>With virtual memory however, a mapping is performed between the virtual address space a program sees and the physical addresses of various storage devices such as the RAM but also the hard disk. Mapping makes it possible for the operating system to use physical memory for the parts of a process that are currently being used and back up the rest of the virtual memory to a secondary storage location such as the hard disk. With virtual memory, the size of RAM is not the limit anymore as the system hard disk can be used to store information as well.</p>
+<p>The following figure illustrates the principle:</p>
+<p><img alt="Diagram showing virtual address space referencing RAM and hard disk." src="https://lh6.googleusercontent.com/Khd9IFoOOGPTo3Na6vUnXLaJSt19tgAeStnLba9xlwNPgBLuZ3TL2LNeuf2h7kbNXLllSwEq47FI0_-keyjtEM8WXFPDbNicmWXdzh9kuw5tI3dtK-pGUajs4HyikftqCb56xqJt8KtzXvXtpVoI2bY" width="624" height="391"></p>
+<p>With virtual memory, the RAM acts as a cache for the virtual memory space which resides on secondary storage devices. On Windows systems, the file&nbsp;pagefile.sys&nbsp;is such a virtual memory container of varying size. To speed up your system, it makes sense to adjust the system settings in a way that this file is stored on an SSD instead of a slow magnetic hard drive, thus reducing the latency. On a Mac, swap files are stored in/private/var/vm/.</p>
+<p>In a nutshell, virtual memory guarantees us a fixed-size address space which is largely independent of the system configuration. Also, the OS guarantees that the virtual address spaces of different programs do not interfere with each other.</p>
+<p>The task of mapping addresses and of providing each program with its own virtual address space is performed entirely by the operating system, so from a programmer&rsquo;s perspective, we usually don&rsquo;t have to bother much about memory that is being used by other processes.</p>
+<p>Before we take a closer look at an example though, let us define two important terms which are often used in the context of caches and virtual memory:</p>
+<ul>
+    <li>
+        <p>A&nbsp;memory page&nbsp;is a number of directly successive memory locations in virtual memory defined by the computer architecture and by the operating system. The computer memory is divided into memory pages of equal size. The use of memory pages enables the operating system to perform virtual memory management. The entire working memory is divided into tiles and each address in this computer architecture is interpreted by the Memory Management Unit (MMU) as a logical address and converted into a physical address.</p>
+    </li>
+    <li>
+        <p>A&nbsp;memory frame&nbsp;is mostly identical to the concept of a memory page with the key difference being its location in the physical main memory instead of the virtual memory.</p>
+    </li>
+</ul>
+<p>The following diagram shows two running processes and a collection of memory pages and frames:</p>
+<p><img alt="Diagram showing two running processes and a collection of memory pages and frames." src="https://lh5.googleusercontent.com/_eaFMmMJZOavPddBXSO4ePeT8m-WkDFCJ0Y5FxqixW4mVUXCtL0Fg5ke1BtO5QtEFOVY6vSm-7-R7U2APNFLOvxRjHRs-8WIladxa2PecXYdykzBK8Jck41UxQCk1h6yDK2QkG3kk9NXzAKIJsGSJ60" width="624" height="624"></p>
+<p>As can be seen, both processes have their own virtual memory space. Some of the pages are mapped to frames in the physical memory and some are not. If process 1 needs to use memory in the memory page that starts at address 0x1000, a page fault will occur if the required data is not there. The memory page will then be mapped to a vacant memory frame in physical memory. Also, note that the virtual memory addresses are not the same as the physical addresses. The first memory page of process 1, which starts at the virtual address 0x0000, is mapped to a memory frame that starts at the physical address 0x2000.</p>
+<p>In summary, virtual memory management is performed by the operating system and programmers do usually not interfere with this process. The major benefit is a unique perspective on a chunk of memory for each program that is only limited in its size by the architecture of the system (32 bit, 64 bit) and by the available physical memory, including the hard disk.</p>
+                        <!-- Post header-->
+                        <!-- <header class="mb-4"> -->
+                            <!-- Post title-->
+                            <!-- <h1 class="fw-bolder mb-1">Welcome to Blog Post!</h1> -->
+                            <!-- Post meta content-->
+                            <!-- <div class="text-muted fst-italic mb-2">Posted on January 1, 2022 by Start Bootstrap</div> -->
+                            <!-- Post categories-->
+                            <!-- <a class="badge bg-secondary text-decoration-none link-light" href="#!">Web Design</a>
+                            <a class="badge bg-secondary text-decoration-none link-light" href="#!">Freebies</a>
+                        </header> -->
+                        <!-- Preview image figure-->
+                        <!-- <figure class="mb-4"><img class="img-fluid rounded" src="https://dummyimage.com/900x400/ced4da/6c757d.jpg" alt="..." /></figure> -->
+                        <!-- Post content-->
+                        <!-- <section class="mb-5">
+                            <p class="fs-5 mb-4">Science is an enterprise that should be cherished as an activity of the free human mind. Because it transforms who we are, how we live, and it gives us an understanding of our place in the universe.</p>
+                            <p class="fs-5 mb-4">The universe is large and old, and the ingredients for life as we know it are everywhere, so there's no reason to think that Earth would be unique in that regard. Whether of not the life became intelligent is a different question, and we'll see if we find that.</p>
+                            <p class="fs-5 mb-4">If you get asteroids about a kilometer in size, those are large enough and carry enough energy into our system to disrupt transportation, communication, the food chains, and that can be a really bad day on Earth.</p>
+                            <h2 class="fw-bolder mb-4 mt-5">I have odd cosmic thoughts every day</h2>
+                            <p class="fs-5 mb-4">For me, the most fascinating interface is Twitter. I have odd cosmic thoughts every day and I realized I could hold them to myself or share them with people who might be interested.</p>
+                            <p class="fs-5 mb-4">Venus has a runaway greenhouse effect. I kind of want to know what happened there because we're twirling knobs here on Earth without knowing the consequences of it. Mars once had running water. It's bone dry today. Something bad happened there as well.</p>
+                        </section>
+                    </article> -->
+                    <!-- Comments section-->
+                    <!-- <section class="mb-5">
+                        <div class="card bg-light">
+                            <div class="card-body"> -->
+                                <!-- Comment form-->
+                                <!-- <form class="mb-4"><textarea class="form-control" rows="3" placeholder="Join the discussion and leave a comment!"></textarea></form> -->
+                                <!-- Comment with nested comments-->
+                                <!-- <div class="d-flex mb-4"> -->
+                                    <!-- Parent comment-->
+                                    <!-- <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div> -->
+                                        <!-- If you're going to lead a space frontier, it has to be government; it'll never be private enterprise. Because the space frontier is dangerous, and it's expensive, and it has unquantified risks. -->
+                                        <!-- Child comment 1-->
+                                        <!-- <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                And under those conditions, you cannot establish a capital-market evaluation of that enterprise. You can't get investors.
+                                            </div>
+                                        </div> -->
+                                        <!-- Child comment 2-->
+                                        <!-- <div class="d-flex mt-4">
+                                            <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                            <div class="ms-3">
+                                                <div class="fw-bold">Commenter Name</div>
+                                                When you put money directly to a problem, it makes a good headline.
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div> -->
+                                <!-- Single comment-->
+                                <!-- <div class="d-flex">
+                                    <div class="flex-shrink-0"><img class="rounded-circle" src="https://dummyimage.com/50x50/ced4da/6c757d.jpg" alt="..." /></div>
+                                    <div class="ms-3">
+                                        <div class="fw-bold">Commenter Name</div>
+                                        When I look at the universe and all the ways the universe wants to kill us, I find it hard to reconcile that with statements of beneficence.
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </section> -->
+                <!-- </div> -->
+                <!-- Side widgets-->
+                <!-- <div class="col-lg-4"> -->
+                    <!-- Search widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Search</div>
+                        <div class="card-body">
+                            <div class="input-group">
+                                <input class="form-control" type="text" placeholder="Enter search term..." aria-label="Enter search term..." aria-describedby="button-search" />
+                                <button class="btn btn-primary" id="button-search" type="button">Go!</button>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Categories widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Categories</div>
+                        <div class="card-body">
+                            <div class="row">
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">Web Design</a></li>
+                                        <li><a href="#!">HTML</a></li>
+                                        <li><a href="#!">Freebies</a></li>
+                                    </ul>
+                                </div>
+                                <div class="col-sm-6">
+                                    <ul class="list-unstyled mb-0">
+                                        <li><a href="#!">JavaScript</a></li>
+                                        <li><a href="#!">CSS</a></li>
+                                        <li><a href="#!">Tutorials</a></li>
+                                    </ul>
+                                </div>
+                            </div>
+                        </div>
+                    </div> -->
+                    <!-- Side widget-->
+                    <!-- <div class="card mb-4">
+                        <div class="card-header">Side Widget</div>
+                        <div class="card-body">You can put anything you want inside of these side widgets. They are easy to use, and feature the Bootstrap 5 card component!</div>
+                    </div> -->
+                </div>
+            </div>
+        </div> 
+        <!-- Footer-->
+        <footer class="py-5 bg-dark">
+            <div class="container"><p class="m-0 text-center text-white">Copyright &copy; Shivang Vijay 2022</p></div>
+        </footer>
+        <!-- Bootstrap core JS-->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+        <!-- Core theme JS-->
+        <script src="js/scripts.js"></script>
+    </body>
+</html>
