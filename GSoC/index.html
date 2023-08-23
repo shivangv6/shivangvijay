@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <meta name="description" content="" />
+    <meta name="author" content="Shivang Vijay" />
+    <title>GSoC work</title>
+    <!-- Favicon-->
+    <link rel="icon" type="image/x-icon" href="assets/favicon.ico" />
+    <!-- Core theme CSS (includes Bootstrap)-->
+    <link href="css/styles.css" rel="stylesheet" />
+    <style>
+        table {
+            border-collapse: collapse;
+            width: 100%;
+        }
+
+        th,
+        td {
+            border: 1px solid black;
+            padding: 8px;
+            text-align: left;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Responsive navbar-->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+        <div class="container">
+            <a class="navbar-brand" href="../index.html">Shivang Vijay</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+                    <li class="nav-item"><a class="nav-link" href="../index.html">Home</a></li>
+                    <!-- <li class="nav-item"><a class="nav-link" href="#!">About</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li> -->
+                    <!-- <li class="nav-item"><a class="nav-link" aria-current="page" href="../index.html">Blogs</a></li> -->
+                </ul>
+            </div>
+        </div>
+    </nav>
+    <!-- Page content-->
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-lg-19">
+                <!-- Post content-->
+                <article>
+                    <center>
+                        <div style="display: flex; align-items: center;">
+                            <img src="./media/emory.jpg" alt="Emory Logo"
+                                style="width: 100px; height: auto; margin-right: 20px;">
+                            <h1>Department Of Biomedical Informatics, Emory University | GSoC'23</h1>
+                        </div>
+                    </center>
+
+                    <p><br></p>
+                    <p>This page demonstrates the project work titled "A Real-Time Computing Support for Concore" under
+                        <em>Google Summer of Code, 2023 <a href="https://github.com/ControlCore-Project">Emory
+                                BMI</a></em>.
+                    </p>
+                    <!-- <p><br></p> -->
+                    <ul>
+                        <li>Project Title: <em>A real-time computing support for Concore.</em></li>
+                        <li>Contributor: <a href="https://github.com/shivangvijay">Shivang Vijay</a></li>
+                        <li>Email: shivangvijay@gmail.com</li>
+                    </ul>
+
+                    <h2>Overview</h2>
+                    <p>Developed a shared memory Inter-Process Communication (IPC) between processes within Concore to
+                        achieve real-time computing capabilities. Additionally, generated a comparative report between
+                        shared memory IPC and file-based IPC for information sharing. Moreover, successfully set up
+                        Concore on a Raspberry Pi with Real-Time Clock (RTC) integration.</p>
+
+                    <p>Below video shows the Concore setup on a Raspberry Pi with an RTC module, and there is no
+                        internet connection. Follow <a
+                            href="https://control-core.readthedocs.io/en/latest/raspberrypi.html">Instructions</a> to
+                        set up Raspberry Pi with RTC.</p>
+                    <center>
+                        <video width="640" height="360" controls>
+                            <source src="./media/Raspberry_with_RTC.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </center>
+                    <p><br></p>
+
+                    <p>Below video shows the Concore setup on a Raspberry Pi using VNC with an internet connection.</p>
+
+                    <center>
+                        <video width="640" height="360" controls>
+                            <source src="./media/concore_rasp.mp4" type="video/mp4">
+                            Your browser does not support the video tag.
+                        </video>
+                    </center>
+
+                    <p><br></p>
+
+                    <h2>Contributions</h2>
+
+                    <table>
+                        <tr>
+                            <th>Github Code Link</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://github.com/ControlCore-Project/concore/blob/main/concore.hpp">https://github.com/ControlCore-Project/concore.hpp</a>
+                            </td>
+                            <td>Implementation of Shared Memory</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://github.com/ControlCore-Project/documentation/blob/main/docs/source/raspberrypi.rst">https://github.com/ControlCore-Project/documentation/raspberrypi.rst</a>
+                            </td>
+                            <td>Adding RTC Module to Raspberry Pi</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://github.com/ControlCore-Project/documentation/blob/main/docs/source/sharedmemory.rst">https://github.com/ControlCore-Project/documentation/sharedmemory.rst</a>
+                            </td>
+                            <td>Shared Memory communication in Concore</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://github.com/ControlCore-Project/documentation/blob/main/docs/source/CodeDocumentation.rst">https://github.com/ControlCore-Project/documentation/CodeDocumentation.rst</a>
+                            </td>
+                            <td>Code Documentation of Concore.hpp</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://github.com/ControlCore-Project/documentation/blob/main/Chats/Benchtest_between_Shared_Memory_and_File_Method_in_Laptop.ipynb">https://github.com/ControlCore-Project/Benchtest_between_Shared_Memory_and_File_Method_in_Laptop.ipynb</a>
+                            </td>
+                            <td>Benchtest between Shared Memory and File Method in Laptop</td>
+                        </tr>
+                        <tr>
+                            <td><a
+                                    href="https://github.com/ControlCore-Project/documentation/blob/main/Chats/Benchtest_between_Shared_Memory_and_File_Method_in_Raspberry_Pi.ipynb">https://github.com/ControlCore-Project/Benchtest_between_Shared_Memory_and_File_Method_in_Raspberry_Pi.ipynb</a>
+                            </td>
+                            <td>Benchtest between Shared Memory and File Method in Raspberry Pi</td>
+                        </tr>
+                    </table>
+
+                    <p><br></p>
+                    <h3>Comparison between Shared Memory and File Method in Laptop</h3>
+                    <a href="https://github.com/ControlCore-Project/documentation/blob/main/Chats/Benchtest_between_Shared_Memory_and_File_Method_in_Laptop.ipynb"
+                        class="link-with-padding">Code</a>
+                    <a href="https://github.com/ControlCore-Project/documentation/blob/main/Benchtest%20between%20Shared%20Memory%20and%20File%20Method%20-%20Laptop.pdf"
+                        class="link-with-padding">Detailed Report</a>
+                    <p><br></p>
+                    <h6>Result:-</h6>
+                    <table>
+                        <tr>
+                            <th>Graph</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Read_SM_VS_FM_Laptop.png" alt="Read_SM_VS_FM_Laptop"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Reading Process of Shared Memory & File Sharing Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Read process.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Write_FM_SM_Laptop.png" alt="Write_FM_SM_Laptop"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Writing Process of Shared Memory & File Sharing Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Write process.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Sum_FM_SM_Read_Laptop.png" alt="Sum_FM_SM_Read_Laptop"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Sum of Reading Process of Shared Memory (SM) & File Sharing (FS)
+                                        Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Read process.</li>
+                                    <li>Read Time of SM is 1.301279ms and of FM is 6.10308ms.</li>
+                                    <li>Difference between FM and SM is 4.801801ms.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Sum_FM_SM_Write_Laptop.png" alt="Sum_FM_SM_Write_Laptop"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Sum of Writing Process of Shared Memory (SM) & File Sharing (FS)
+                                        Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Write process.</li>
+                                    <li>Write Time of SM is 0.891778ms and of FM is 3.76835ms.</li>
+                                    <li>Difference between FM and SM is 2.876577ms.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    <p><br></p>
+                    <h3>Comparison between Shared Memory and File Method in Raspberry Pi</h3>
+                    <p>Report generated in Raspberry Pi 3 Model B+</p>
+                    <a href="https://github.com/ControlCore-Project/documentation/blob/main/Chats/Benchtest_between_Shared_Memory_and_File_Method_in_Raspberry_Pi.ipynb"
+                        class="link-with-padding">Code</a>
+                    <a href="https://github.com/ControlCore-Project/documentation/blob/main/Benchtest%20between%20Shared%20Memory%20and%20File%20Method%20-%20Raspberry%20Pi.pdf"
+                        class="link-with-padding">Detailed Report</a>
+                    <p><br></p>
+                    <h6>Result:-</h6>
+                    <table>
+                        <tr>
+                            <th>Graph</th>
+                            <th>Description</th>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Read_SM_VS_FM_Raspberry.png" alt="Read_SM_VS_FM_Rasp"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Reading Process of Shared Memory & File Sharing Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Read process.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Write_FM_SM_Raspberry.png" alt="Write_FM_SM_Rasp"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Writing Process of Shared Memory & File Sharing Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Write process.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Sum_FM_SM_Read_Raspberry.png" alt="Sum_FM_SM_Read_Rasp"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Sum of Reading Process of Shared Memory (SM) & File Sharing (FS)
+                                        Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Read process.</li>
+                                    <li>Read Time of SM is 17.375456ms and of FM is 86.978228ms.</li>
+                                    <li>Difference between FM and SM is 69.602772ms.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="./media/Chats/Sum_FM_SM_Write_Raspberry.png" alt="Sum_FM_SM_Write_Rasp"
+                                    style="width: 800px; height: auto; margin-right: 20px;">
+                            </td>
+                            <td>
+                                <ul>
+                                    <li>Graph for the Sum of Writing Process of Shared Memory (SM) & File Sharing (FS)
+                                        Method.</li>
+                                    <li>This graph is plotted for ~100 iterations of the Write process.</li>
+                                    <li>Write Time of SM is 6.837646ms and of FM is 47.991238ms.</li>
+                                    <li>Difference between FM and SM is 41.153592ms.</li>
+                                </ul>
+                            </td>
+                        </tr>
+                    </table>
+                    
+                    <p></br></p>
+                    <h3>Conclusion</h3>
+                    <p>My implementation of shared memory demonstrates superior performance based on the analysis of
+                        the presented graphs. The results obtained from the graphs, derived from approximately 100
+                        iterations, reveal the effectiveness of the shared memory approach. Notably, as the number of
+                        iterations increases, the advantages of the shared memory implementation become even more
+                        pronounced, showcasing its potential to provide nearly real-time computing capabilities for
+                        Concore.</p>
+                    
+                    <p></br></p>
+                    <p></br></p>
+
+        
+            </div>
+        </div>
+    </div>
+    <!-- Footer-->
+    <footer class="py-5 bg-dark">
+        <div class="container">
+            <p class="m-0 text-center text-white">Copyright &copy; Shivang Vijay 2023</p>
+        </div>
+    </footer>
+    <!-- Bootstrap core JS-->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- Core theme JS-->
+    <script src="js/scripts.js"></script>
+</body>
+
+</html>
