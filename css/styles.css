@@ -10128,14 +10128,11 @@ span:before{
   0%{
       content: "Explorer";
   }
-  25%{
+  33%{
       content: "ROBOTICIST";
   }
-  50%{
+  66%{
       content: "Designer";
-  }
-  75%{
-      content: "Researcher";
   }
   100%{
       content: "Developer";
